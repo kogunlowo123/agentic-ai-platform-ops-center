@@ -1,0 +1,8 @@
+{
+  "_note": "Illustrative prices for fictional model names. Replace with your contract prices.",
+  "models": {
+    "small-model": {"input_per_mtok": 0.5, "output_per_mtok": 1.5},
+    "large-model": {"input_per_mtok": 3.0, "output_per_mtok": 15.0},
+    "reasoning-model": {"input_per_mtok": 10.0, "output_per_mtok": 40.0}
+  }
+}

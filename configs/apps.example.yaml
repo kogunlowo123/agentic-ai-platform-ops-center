@@ -1,0 +1,15 @@
+# Service-level objectives and budgets per application.
+apps:
+  support-bot:
+    owner: support-platform
+    slo_availability: 0.995
+    slo_p95_ms: 3000
+    daily_budget_usd: 1.5
+    monthly_budget_usd: 60
+    min_grounding: 0.75
+    eval_suite: support-regression
+  code-assistant:
+    owner: developer-experience
+    slo_availability: 0.99
+    slo_p95_ms: 12000
+    daily_budget_usd: 60

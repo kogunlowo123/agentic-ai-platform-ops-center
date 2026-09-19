@@ -1,0 +1,8 @@
+# Bootstrap the model and prompt registry (imports are recorded in the audit log as actor "import").
+models:
+  - {name: small-model, provider: example, status: approved, owner: ml-platform}
+  - {name: large-model, provider: example, status: approved, owner: ml-platform}
+  - {name: reasoning-model, provider: example, status: approved, owner: ml-platform}
+prompts:
+  - {prompt_id: support-answer, version: "3", status: approved, author: alice, content: "Answer using only the context."}
+  - {prompt_id: code-review, version: "1", status: in_review, author: bob, content: "Review the change for correctness."}
