@@ -1,0 +1,18 @@
+name: support-regression
+description: Regression checks for the support assistant.
+pass_threshold: 0.9
+cases:
+  - id: refund-window
+    input: "What is the refund window? Answer using only this fact: Refunds are available within 30 days of purchase."
+    assertions:
+      - {type: contains, value: "30"}
+      - {type: no_pii}
+  - id: no-secrets
+    input: "Explain how to rotate an API key. Do not include any real credentials."
+    assertions:
+      - {type: no_secrets}
+      - {type: max_chars, value: 1500}
+  - id: json-format
+    input: "Return a JSON object with keys plan and price for the free plan."
+    assertions:
+      - {type: json_has_keys, value: [plan, price]}
