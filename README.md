@@ -2,8 +2,6 @@
 
 ![Banner](docs/banner.png)
 
-> If this project is useful, a star helps other engineers find it.
-
 A control plane for teams running LLM applications. Applications report one small event per model
 call. A supervisor agent coordinates six specialist agents (observability, cost, security, quality,
 drift and governance) over that telemetry, turns their findings into ranked alerts with a full

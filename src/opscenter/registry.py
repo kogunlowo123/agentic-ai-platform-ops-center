@@ -89,7 +89,7 @@ class Registry:
         self._db = db
         self._clock = clock or (lambda: datetime.now(timezone.utc))
 
-    # -- audit ---------------------------------------------------------------------------------
+    # audit
 
     def _audit(self, actor: str, action: str, subject: str, detail: str = "") -> None:
         self._db.conn.execute(
@@ -114,7 +114,7 @@ class Registry:
             for r in rows
         ]
 
-    # -- models --------------------------------------------------------------------------------
+    # models
 
     def register_model(
         self,
@@ -190,7 +190,7 @@ class Registry:
             self._audit(actor, "model.status", name, f"{entry.status} -> {status}")
         return entry.model_copy(update={"status": status})
 
-    # -- prompts -------------------------------------------------------------------------------
+    # prompts
 
     def register_prompt(
         self,

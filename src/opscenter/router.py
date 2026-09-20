@@ -88,7 +88,7 @@ class ModelRouter:
             raise ValueError("at least one candidate is required")
         self._breakers = {c.name: _Breaker() for c in self.candidates}
 
-    # -- ordering and breaker ------------------------------------------------------------------
+    # ordering and breaker
 
     def _ordered(self, tier: str | None) -> list[RouteCandidate]:
         pool = [c for c in self.candidates if tier is None or c.tier == tier]
@@ -136,7 +136,7 @@ class ModelRouter:
             for name, b in self._breakers.items()
         }
 
-    # -- calls ---------------------------------------------------------------------------------
+    # calls
 
     def _emit(
         self,
