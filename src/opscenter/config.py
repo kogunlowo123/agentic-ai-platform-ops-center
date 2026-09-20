@@ -54,7 +54,11 @@ class Settings(BaseSettings):
     """Runtime settings from ``OPSCENTER_*`` environment variables and ``.env``."""
 
     model_config = SettingsConfigDict(
-        env_prefix="OPSCENTER_", env_file=".env", env_file_encoding="utf-8", extra="ignore"
+        env_prefix="OPSCENTER_",
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore",
+        populate_by_name=True,
     )
 
     db_path: Path = Path(".opscenter/opscenter.db")
