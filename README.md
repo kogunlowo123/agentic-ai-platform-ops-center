@@ -2,6 +2,8 @@
 
 ![Banner](docs/banner.png)
 
+**Built by [Citadel Cloud Management](https://www.linkedin.com/company/citadel-cloud-management/)** — follow on LinkedIn for more engineering work like this.
+
 A control plane for teams running LLM applications. Applications report one small event per model
 call. A supervisor agent coordinates six specialist agents (observability, cost, security, quality,
 drift and governance) over that telemetry, turns their findings into ranked alerts with a full
