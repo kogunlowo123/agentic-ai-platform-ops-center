@@ -162,7 +162,6 @@ records in [docs/adr](docs/adr).
 ```
 agentic-ai-platform-ops-center/
 ├── .github/
-│   ├── dependabot.yml
 │   └── workflows/
 │       ├── ci.yml                    # lint, format, types, tests, audit, build
 │       └── codeql.yml
@@ -508,8 +507,7 @@ python -m pytest -m integration
 | Dependency audit | `pip-audit` against `requirements.txt` |
 | Build validation | Builds sdist and wheel, `twine check`, builds and smoke-tests the Docker image |
 
-`.github/workflows/codeql.yml` runs CodeQL on pushes, pull requests and weekly. Dependabot proposes
-weekly updates.
+`.github/workflows/codeql.yml` runs CodeQL on pushes, pull requests and weekly.
 
 ## Limitations
 

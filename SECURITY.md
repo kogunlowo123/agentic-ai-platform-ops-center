@@ -40,7 +40,7 @@ You can expect an acknowledgement within 3 business days and a triage decision w
 | Tampered prompts in production | Content hash pinning and `verify_prompt` | `registry.py` |
 | Monitoring blind spots | Agent failures raise alerts and never resolve existing ones | `agents/supervisor.py`, `alerts.py` |
 | Upstream instability | Bounded retries on transient errors only; circuit breakers in the router | `retry.py`, `router.py` |
-| Vulnerable dependencies | `pip-audit`, Dependabot, CodeQL | `.github/` |
+| Vulnerable dependencies | `pip-audit`, CodeQL | `.github/` |
 | Container | Multi-stage build, non-root user | `Dockerfile` |
 
 ## Known limitations
